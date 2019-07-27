@@ -178,7 +178,7 @@ export default class Slideshow extends Component {
     return (
       <View style={[
           this.props.containerStyle,
-          { height: height }
+          { height: height, paddingHorizontal: 15 }
         ]}>
         {/* SECTION IMAGE */}
         <ScrollView
@@ -190,7 +190,7 @@ export default class Slideshow extends Component {
           {...this._panResponder.panHandlers}
           style={[
             styles.container,
-            { height: height }
+            { height: height}
           ]}>
           {this.props.dataSource.map((image, index) => {
             const imageObject = typeof image.url === 'string' ? {uri: image.url} : image.url;
